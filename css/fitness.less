@@ -1,0 +1,130 @@
+//  style for page fitness
+
+.header_fitness{
+    background: @background-black url("../img/background/sport.jpg")no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.fitness_block{
+    &:extend(.flex-sp-between);
+    align-items: stretch;
+
+    .fitness_block_item{
+        width: 50%;
+    }
+}
+
+.fitness_item_content{
+    padding: 50px 0;
+    background-color: @background-grey;
+}
+
+.fitness_item_inner{
+    width: 1000px;
+    padding: 70px 100px 70px 70px;
+    background-color: @background-light;
+    position: relative;
+    left: 50px;
+    z-index: 5;
+
+    .fitness_item_title{
+        font-size: @size-fortyfive;
+        color: @font-title;
+        letter-spacing: 2.4px;
+        margin-bottom: 35px;
+        padding-left: 70px;
+        position: relative;
+    }
+
+    .fitness_item_text{
+        font-family: 'renner-book', serif;
+        line-height: 26px;
+        margin-bottom: 20px;
+        
+        &:last-of-type{
+            margin-bottom: 45px;
+        }
+    }
+}
+
+.fitness_item_title::before{
+    content: "";
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 5px;
+    left: 0;
+    background: url("../img/icon/dumbbell.svg")no-repeat;
+}
+
+.fitness_item_img{
+    background: @background-black url("../img/background/fitness3.jpg")no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.fitness_desc{
+    &:extend(.flex-sp-between);
+    align-items: stretch;
+    padding: 110px 0;
+
+    .fitness_desc_title{
+        font-size: @size-fortyfive;
+        color: @font-title;
+        letter-spacing: 2.4px;
+        margin-bottom: 40px;
+    }
+
+    .fitness_desc_item{
+        width: 50%;
+    }
+}
+
+.fitness_desc_item_img{
+    background: url("../img/background/fitness.png")no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.fitness_desc_list_item{
+    padding-left: 70px;
+    position: relative;
+
+    .fitness_desc_list_title{
+        font-size: @size-twentyfive;
+        color: @font-title;
+        letter-spacing: .5px;
+        margin-bottom: 20px;
+    }
+
+    .fitness_desc_list_text{
+        font-family: 'renner-book', serif;
+        line-height: 26px;
+    }
+
+    &:not(:last-child){
+        margin-bottom: 30px;
+    }
+
+    &::before{
+        content: "";
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: url("../img/icon/spritesheet5.png")no-repeat;
+    }
+}
+
+.fitness_desc_list_item:first-child::before{
+    background-position: -125px -5px;
+}
+.fitness_desc_list_item:nth-child(2)::before{
+    background-position: -65px -5px;
+}
+.fitness_desc_list_item:last-child::before{
+    background-position: -5px -5px;
+}

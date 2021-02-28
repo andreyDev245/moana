@@ -1,0 +1,203 @@
+//  style for section hotel life 
+
+.hotelLife{
+    background: url("../img/background/city.jpg")no-repeat;
+    background-position: top right;
+}
+
+.hotelLife_block:extend(.flex-sp-between){
+    width: 100%;
+    padding: 110px 10px;
+}
+
+.hotelLife_block_content{
+    width: 100%;
+    max-width: 565px;
+    margin-right: 20px;
+
+    .hotelLife_content_title{
+        font-size: @size-fortyfive;
+        color: @font-title;
+        margin-bottom: 50px;
+    }
+
+    .hotelLife_content_text{
+        font-family: 'renner-book', serif;
+        font-size: @size-fifteen;
+        text-indent: 20px;
+        line-height: 22px;
+    }
+    .hotelLife_content_text:not(:last-of-type){
+        margin-bottom: 20px;
+    }
+}
+
+.hotelLife_content_btn{
+    display: inline-block;
+    font-family: 'renner-medium', serif;
+    font-size: @size-thirteen;
+    text-transform: uppercase;
+    color: @white-color;
+    background-color: @background-black;
+    padding: 1rem 2.37rem;
+    margin-top: 50px;
+    transition: .3s;
+    border: 2px solid transparent;
+
+    &:hover{
+        background-color: @background-light;
+        border: 2px solid @background-black;
+        color: @font-title;
+    }
+
+    &:not(:last-child){
+        margin-right: 5px;
+    }
+}
+
+
+.hotelLife_block_galery:extend(.flex-sp-between){
+    line-height: 0;
+    
+    .hotelLife_galery_item{
+        width: 100%;
+        max-width: 270px;
+        min-width: 200px;
+
+        &:not(:last-child){
+            margin-right: 20px;
+        }
+    }
+}
+
+//  style for hotelLife block two
+
+.hotelLife_block_two:extend(.flex-sp-between){
+    justify-content: flex-start;
+
+    .hotelLife_two_image{
+        width: 100%;
+        max-width: 960px;
+        min-width: 720px;
+        max-height: 695px;
+        height: 100%;
+        margin-right: 100px;
+        line-height: 0;
+    }
+
+    .hotelLife_two_content{
+        width: 100%;
+        max-width: 715px;
+        padding-right: 15px;
+    }
+}
+
+.hotelLife_two_title{
+    font-size: @size-fortyfive;
+    color: @font-title;
+    margin-bottom: 60px;
+}
+
+.meta{
+    font-family: 'renner-book', serif;
+    font-size: @size-twentyfive;
+    color: @font-title;
+    max-width: 470px;
+    width: 100%;
+    margin-bottom: 40px;
+
+    .meta_list:extend(.flex-sp-between){
+        align-items: flex-end;
+
+        .meta_item:not(:last-child){
+            margin-right: 10px;
+            line-height: 26px;
+        }
+        .meta_price{
+            font-family: 'renner-medium', serif;
+            font-size: @size-thirtyfive; 
+            color: @font-brown;
+        }
+
+        .status{
+            font-family: 'renner-medium', serif;
+            color: @font-brown;
+        }
+    }
+
+    .meta_parameters{
+        font-size: @size-seventeen;
+        max-width: 340px;
+        width: 100%;
+        margin-top: 30px;
+
+        .meta_parameters_item{
+            padding-left: 35px;
+            position: relative;
+            line-height: 25px;
+            color: @font-text;
+        }
+    }
+}
+
+.meta_parameters_item::before{
+    content: "";
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.meta_parameters_item:first-child::before{
+    background: url("../img/icon/bed.png")no-repeat;
+}
+.meta_parameters_item:nth-child(2)::before{
+    background: url("../img/icon/plans.png")no-repeat;
+}
+.meta_parameters_item:last-child::before{
+    background: url("../img/icon/user.png")no-repeat;
+}
+
+.hotelLife_two_text{
+    font-family: 'renner-book', serif;
+    font-size: @size-fifteen;
+    line-height: 26px;
+    text-indent: 20px;
+}
+
+.hotelLife_two_galery:extend(.flex-sp-between){
+    justify-content: center;
+    line-height: 0;
+    margin-top: 15px;
+
+    .hotelLife_two_galery_link{
+        display: inline-block;
+        width: 100%;
+        max-width: 370px;
+        min-width: 200px;
+        max-height: 290px;
+        position: relative;
+
+        &:not(:last-child){
+            margin-right: 15px;
+        }
+    }
+
+    .hotelLife_galery_desc{
+        font-family: 'renner-book', serif;
+        font-size: @size-fifteen;
+        color: @white-color;
+        position: absolute;
+        top: 35px;
+        left: 40px;
+        background-color: @background-black;
+        padding: 20px; 
+
+        .hotelLife_desc_price{
+            color: @font-brown;
+            margin-left: 10px;
+        }
+    }
+}

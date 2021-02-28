@@ -1,0 +1,105 @@
+//  style for slide recommendation
+
+.carousel{
+    padding: 110px 10px;
+}
+
+.carousel_title_block{
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    text-align: center;
+
+    .carousel_title{
+        font-size: @size-fortyfive;
+        color: @font-title;
+    }
+
+    .carousel_subtitle{
+        font-family: 'renner-book', serif;
+        font-size: @size-seventeen;
+        color: @font-title;
+        text-transform: uppercase;
+        line-height: 24px;
+        margin-top: 20px;
+    }
+}
+
+.carousel_item{
+    font-family: 'renner-light', serif;
+    font-size: @size-twenty;
+    color: @font-title;
+    text-align: center;
+    position: relative;
+
+    .carousel_item_text{
+        line-height: 30px;
+        padding: 30px 90px;
+        position: relative;
+    }
+    .carousel_author{
+        font-family: 'renner-medium', serif;
+        color: @font-brown;
+        text-transform: uppercase;
+        margin-top: 45px;
+        letter-spacing: 2px;
+    }
+}
+
+.carousel_item_text::before{
+    content: "";
+    width: 45px;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("../img/icon/left-quotes.svg")no-repeat;
+}
+
+.carousel_item_text::after{
+    content: "";
+    width: 45px;
+    height: 30px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: url("../img/icon/left-quotes.svg")no-repeat;
+    transform: rotate(180deg);
+}
+
+.carousel .owl-dots{
+    width: 100%;
+    margin-top: 50px;
+    text-align: center;
+
+    .owl-dot{
+        width: 20px;
+        height: 20px;
+        border: 1px solid transparent;
+        border-radius: 50%;
+        
+        >span{
+            display:block;
+            width: 10px;
+            height: 10px;
+            border: 2px solid @grey;
+            border-radius: 50%;
+            margin: 0 auto;
+        }
+
+    }
+
+    .owl-dot:not(:last-child){
+        margin-right: 10px;
+    }
+}
+
+.carousel .owl-dot.active{
+    border: 1px solid @background-black;
+
+    >span{
+        background-color: @background-black;
+        border: 2px solid @background-black;
+    }
+}

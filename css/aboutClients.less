@@ -1,0 +1,186 @@
+//  style for section happy clients and about galery
+
+.about_clients{
+    padding: 110px 10px;
+    background-color: @background-grey;
+}
+
+.about_clients_title_block:extend(.flex-sp-between){
+    margin-bottom: 60px;
+
+    .about_clients_title{
+        font-size: @size-fortyfive;
+        color: @font-title;
+        letter-spacing: 1.35px;
+    }
+
+    .about_clients_title_link{
+        font-family: 'renner-medium', serif;
+        font-size: @size-thirteen;
+        color: @font-title;
+        text-transform: uppercase;
+        letter-spacing: 1.3px;
+        padding: 3px 0;
+        border-bottom: 1px solid transparent;
+        transition: border-bottom .3s;
+
+        &:hover,
+        &:focus{
+            border-bottom: 1px solid @font-title;
+        }
+    }
+}
+
+.about_clients_link_box{
+    display: none;
+    text-align: center;
+}
+.btn_book_room.about_clients_link{
+    margin: 50px auto 0 auto;
+    display: inline-block;
+}
+
+.about_message_inner{
+    display: none;
+    background-color: @background-light;
+    padding: 45px;
+
+    .about_title_rating{
+        font-size: @size-twenty;
+        color: @font-title;
+        margin-bottom: 35px;
+        letter-spacing: 0.6px;
+        position: relative;
+        padding-right: 110px;
+    }
+
+    .about_message_text{
+        font-family: 'renner-book', serif;
+        font-size: @size-seventeen;
+        color: @font-title;
+        letter-spacing: 0.51px;
+        line-height: 28px;
+    }
+}
+
+.rating_stars{
+    color: @font-brown;
+}
+
+.about_message_tabs{
+    margin-top: 35px;
+
+    .about_message_tab{
+        font-family: 'renner-medium', serif;
+        font-size: @size-seventeen;
+        color: @font-text;
+        height: 70px;
+        padding-left: 90px;
+        position: relative;
+        text-align: left;
+        line-height: 0;
+        filter: grayscale(100%);
+        
+
+        .about_tabs_user{
+            text-transform: uppercase;
+            letter-spacing: 1.7px;
+            display: block;
+            margin-bottom: 10px;
+            line-height: normal;
+        }
+        .about_tabs_location{
+            display: block;
+            color: @font-text;
+            font-size: @size-fifteen; 
+            line-height: normal;      
+        }
+
+        &:not(:last-child){
+            margin-right: 110px;
+        }
+    }
+
+    .about_message_tab::before{
+        content: "";
+        width: 70px;
+        height: 70px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        border-radius: 50%;
+    }
+}
+
+.about_message_tab:first-child::before{
+    background: url("../img/background/user1.jpg")no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.about_message_tab:nth-child(2)::before{
+    background: url("../img/background/user2.jpg")no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.about_message_tab:last-child::before{
+    background: url("../img/background/user3.jpg")no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.about_message_tab.about_message_tab--active{
+    filter: grayscale(0);
+
+    .about_tabs_user{
+        color: @font-title;
+    }
+}
+
+.about_message_inner.about_message_inner--active{
+    display: block;
+}
+
+// style for about galery
+
+.about_galery:extend(.flex-sp-between){
+    flex-wrap: wrap;
+    align-items: stretch;
+    max-width: 1920px;
+    margin: 0 auto;
+    background-color: @background-black;
+}
+
+.about_galery_item{
+    width: 50%;
+    max-height: 530px;
+    // height: 100%;
+}
+
+.about_galery_img{
+    line-height: 0;
+}
+
+.about_galery_content:extend(.flex-sp-between){
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+
+    .about_galery_title,
+    .about_galery_text{
+        max-width: 760px;
+        width: 100%;
+        color: @white-color;
+    }
+
+    .about_galery_title{
+        font-size: @size-fortyfive;
+        letter-spacing: 1.35px;
+    }
+    .about_galery_text{
+        font-family: 'renner-book', serif;
+        font-size: @size-seventeen;
+        letter-spacing: 1.51px;
+        line-height: 26px;
+        margin-top: 40px;
+    }
+}

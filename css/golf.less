@@ -1,0 +1,116 @@
+//  style for golf page
+
+.header_golf{
+    background: @background-black url("../img/background/golf-main.jpg")no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.golf_block{
+    &:extend(.flex-sp-between);
+
+    .golf_block_item{
+        width: 50%;
+    }
+
+    .golf_block_video{
+        align-self: stretch;
+        line-height: 0;
+        position: relative;
+    }
+}
+
+.golf_btnPlay{
+    font-size: 20px;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    padding-bottom: 5px;
+    top: 50%;
+    left: -30px;
+    transform: translateY(-50%) rotate(90deg);
+    background-color: @background-light;
+    box-shadow: 0 0 15px @grey-border;
+    border-radius: 50%;
+}
+
+.golf_item_content{
+    padding: 25px 90px;
+}
+.golf_block_title{
+    font-size: @size-fortyfive;
+    color: @font-title;
+    letter-spacing: 1.4px;
+    margin-bottom: 30px;
+}
+
+.golf_block_text{
+    font-family: 'renner-book', serif;
+    line-height: 24px;
+    max-width: 700px;
+    width: 100%;
+    &:not(:last-of-type){
+        margin-bottom: 20px;
+    }    
+}
+
+.golf_block_btn{
+    margin-top: 50px;
+}
+
+.golf_desc{
+    padding: 110px 10px;
+}
+
+.golf_desc_block_title{
+    flex-direction: column;
+    text-align: center;
+
+    .golf_desc_title{
+        font-size: @size-fortyfive;
+        max-width: none;
+        margin-right: 0;
+        margin-bottom: 20px;    
+    }
+
+    .golf_desc_subtitle{
+        font-size: @size-seventeen;
+        color: @font-title;
+        text-transform: uppercase;
+    }
+}
+
+
+.golf_box{
+    padding: 100px 10px;
+    background: @background-black url("../img/background/golffooter.jpg")no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.golf_box_inner{
+    width: 100%;
+    max-width: 1000px;
+    text-align: center;
+    margin: 0 auto;
+    color: @white-color;
+
+    .golf_box_title{
+        font-size: @size-fortyfive;
+        letter-spacing: 1.4px;
+    }
+    .golf_box_text{
+        font-family: 'renner-book', serif;
+        line-height: 24px;
+        margin: 35px 0 45px;
+    }
+
+    .golf_box_link{
+        background-color: @brown-btn;
+        border: 0;
+        &:hover{
+            border: 0;
+            background-color: @white-light;
+            color: @font-brown;
+        }
+    }
+}

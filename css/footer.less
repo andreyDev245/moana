@@ -1,0 +1,140 @@
+//  style for section footer
+
+.page_footer{
+    padding: 100px 10px 0;
+    background-color: @background-black;
+}
+
+.footer_content:extend(.flex-sp-between){
+    .footer_logo{
+        display: block;
+        max-width: 180px;
+    }
+}
+
+.footer_content_inner{
+    margin-top: 35px;
+    font-family: 'renner-book', serif;
+    font-size: @size-seventeen;
+    color: @white-color;
+    
+
+    .footer_contact_item{
+        display: inline-block;
+        .footer_contact_item_inner,
+        .footer_contact_item_link{
+            display: block;
+        }
+
+        &:not(:last-child){
+            margin-right: 50px;
+        }
+    }
+
+    .footer_contact_item_inner{
+        font-family: 'renner-light', serif;
+        font-size: @size-fourteen;
+        color: @font-light;
+        position: relative;
+        padding-left: 20px; 
+    }
+
+    .footer_contact_item_inner::before{
+        content: "";
+        width: 12px;
+        height: 12px;
+        position: absolute;
+        left: 0;
+        top: 25%;
+        transform: translateY(-25%);
+    }
+
+    .footer_contact_item_link{
+        color: @white-color;
+        line-height: 26px;
+        margin-top: 5px;
+    }
+}
+
+.footer_contact_item:first-child .footer_contact_item_inner::before{
+    background: url("../img/icon/email.svg")no-repeat;
+}
+.footer_contact_item:nth-child(2) .footer_contact_item_inner::before{
+    background: url("../img/icon/phone.svg")no-repeat;
+}
+.footer_contact_item:last-child .footer_contact_item_inner::before{
+    background: url("../img/icon/placeholder.svg")no-repeat;
+}
+
+.footer_form_title{
+    font-family: 'renner-book', serif;
+    font-size: @size-twenty;
+    color: @white-color;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.form_footer{
+    font-size: 0;
+
+    .form_footer_input{
+        font-family: 'renner-book', serif;
+        font-size: @size-thirteen;
+        padding: 14px 15px;
+        background: none;
+        border: 1px solid @light-grey;
+        color: @font-light;
+        letter-spacing: 0.4px;
+        width: 250px;
+    }
+
+    .form_footer_btn{
+        font-family: 'renner-medium', serif;
+        font-size: @size-thirteen;
+        color: @white-color;
+        background-color: @brown-btn;
+        border: 0;
+        text-transform: uppercase;
+        line-height: 14px;
+        padding: 1rem 2.37rem;
+        cursor: pointer;
+    }
+}
+
+.copyright:extend(.flex-sp-between){
+    margin-top: 45px;
+    border-top: 1px solid @light-grey;
+    padding: 35px 0;
+
+    .copyright_text{
+        font-family: 'renner-book', serif;
+        font-size: @size-fifteen;
+        color: @font-light;
+        letter-spacing: 0.45px;
+
+        .copyright_text_theme{
+            color: @font-brown;
+        }
+    }
+}
+
+.copyright_menu:extend(.flex-sp-between){
+
+    .copyright_menu_item:not(:last-child){
+        margin-right: 25px;
+    }
+    
+    .copyright_link{
+        display: inline-block;
+        font-size: @size-fifteen;
+        color: @white-color;
+        letter-spacing: 0.45px;
+        transition: color .3s;
+
+        &:hover,
+        &:focus{
+            color: @font-brown;
+        }
+    }
+}

@@ -1,0 +1,331 @@
+a{text-decoration:none;}ul,dl{margin:0;padding:0;}li{list-style:none;}
+*,*:after,*:before{box-sizing: border-box;}h1,h2,h3,h4,p,dd{margin:0;}button{outline:none;}
+a{-webkit-tap-highlight-color:transparent;}
+
+
+@import url("var");
+
+html,
+body{
+    font-size: 15px;
+}
+
+body{
+    font-family: 'Playfair-regular', serif;
+    width: 100%;
+    min-width: 320px;
+    margin: 0;
+    padding: 0;
+    color: @font-text;
+}
+
+.body--active{
+    overflow: hidden;
+}
+
+button{
+    border: 0;
+    background: none;
+    padding: 0;
+    outline: 0;
+    color: inherit;
+    cursor: pointer;
+}
+
+a{
+    color: @font-text;
+}
+
+.container{
+    width: 100%;
+    max-width: 1175px;
+    margin: 0 auto;
+}
+
+.btn_book_room{
+    display: inline-block;
+    font-family: 'renner-medium', serif;
+    font-size: 13px;
+    line-height: 11px;
+    letter-spacing: .4px;
+    color: @white-color;
+    background-color: @background-black;
+    border: 2px solid transparent;
+    padding: 1rem 2.37rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;    
+    &:hover,
+    &:focus{
+        background-color: @background-light;
+        color: @font-title;
+        border: 2px solid @background-black;
+    }
+}
+
+img,
+source{
+    width: 100%;
+    height: 100%;
+}
+
+.arrow_top{
+    display: none;
+    font-size: 55px;
+    color: @white-color;
+    font-weight: bold;
+    width: 50px;
+    height: 50px;
+    line-height: 48px;
+    text-align: center;
+    background-color: @brown-btn;
+    position: fixed;
+    bottom: 50px;
+    right: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 30;
+    box-shadow: 0 0 15px @btn-darken;
+}
+
+.arrow_top.arrowTop_active{
+    display: block;
+}
+
+.video_overlay,
+.overlay_modal{
+    display: none;
+    width: 100%;
+    height: 100%;
+    padding: 50px 10px;
+    background-color: fadeout(@background-black, 15%);
+    position: fixed;
+    z-index: 50;
+    top: 0;
+    left: 0;
+    overflow: auto;
+}
+.video-extend-wrapper{
+    height: 360px;
+    margin: auto !important;
+    cursor: pointer;
+}
+
+.video_overlay.video_overlay--active,
+.overlay_modal.overlay_modal--active{
+    display: flex;
+}
+
+.modal{
+    max-width: 400px;
+    width: 100%;
+    background-color: @background-light;
+    margin: auto;
+
+    .modal_title,
+    .modal_content{
+        margin: 0;
+        border: none;
+    }
+}
+
+.modal_title{
+    background-color: @background-black;
+    padding: 20px;
+}
+
+.modal_logo{
+    display: block;
+    width: 120px;
+    height: auto;
+}
+
+.modal_content{
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.modal_content_title{
+    line-height: 45px;
+    letter-spacing: 1px;
+}
+
+.modal_content_subtitle{
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+.modal_item,
+.modal_text{
+    width: 100%;
+    padding: 15px 10px;
+    border: 1px solid @grey-border;
+    border-radius: 3px;
+    margin-bottom:  20px;
+    outline: none;
+
+    &:focus{
+        border: 1px solid @brown-btn;
+    }
+}
+
+.modal_text{
+    resize: none;
+    height: 120px;
+}
+.modal_btn{
+    width: 100%;
+    padding: .8rem 2.37rem;
+    letter-spacing: 1.4px;
+    margin: 20px 0;
+}
+.modal_check{
+    display: block;
+    text-align: left;
+    cursor: pointer;
+
+    .jq-checkbox{
+        display: inline-block;
+        margin-right: 7px;
+        vertical-align: -2px;
+        width: 16px;
+        height: 16px;
+        border: 1px solid #C3C3C3;
+        background: none;
+        box-shadow: none;
+        cursor: pointer;
+    }
+
+    .jq-checkbox.checked{
+        border: 1px solid @brown-btn;
+        background-color: @brown-btn;
+    }
+    .jq-checkbox.checked .jq-checkbox__div{
+        border-color: @white-color;
+        width: 10px;
+        height: 5px;
+        margin: 3px 0 0 2px;
+    }
+}
+
+.modal_logIn{
+    font-size: @size-thirteen;
+    letter-spacing: 1px;
+    .modal_link_logIn{
+        color:  @font-brown;
+    }    
+}
+
+.modal_signUp{
+    display: none;
+    justify-content: space-around;
+    font-size: @size-thirteen;
+    letter-spacing: 1px;
+    margin-top: 20px;
+
+    .modal_link_signUp{
+        color: @font-brown;
+    }
+
+    .modal_link_signUp,
+    .modal_password_signUp{
+        &:hover,
+        &:focus{
+            text-decoration: underline;
+        }
+    }
+}
+
+.modal.modal--active{
+    .modal_item_name,
+    .modal_check,
+    .modal_logIn,
+    .modal_content_subtitle{
+        display: none;
+    }
+
+    .modal_signUp{
+        display: flex;
+    }
+
+    .modal_content_title{
+        line-height: normal;
+        margin-bottom: 20px;
+    }
+}
+
+.modal_item_password{
+    position: relative;
+    outline: none;
+    margin-bottom: 30px;
+}
+
+.modal_password_input{
+    border: 1px solid @grey-border;
+    margin-bottom: 0;
+    padding-right: 50px;
+    &:focus{
+        border: 1px solid @brown-btn;
+    }
+}
+
+.modal_password_img{
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    fill: #c8c8c8;
+}
+
+.modal_item_password::before{
+    content: "";
+    width: 30px;
+    height: 2px;
+    position: absolute;
+    right: 12px;
+    top: 21px;
+    background-color: @grey-border;
+    transform: rotate(-35deg);
+}
+.modal_item_password.password_open::before{
+    display: none;
+}
+
+.modal_item_password.password_open .modal_password_img{
+    fill: #222;
+}
+
+
+
+@import url('header');
+@import url('hotelLife');
+@import url('recommendation');
+@import url('offer');
+@import url('features');
+@import url('services');
+@import url('blog');
+@import url('footer');
+
+
+// files for pages about 
+@import url('about');
+@import url('aboutClients');
+
+// files for pages room
+@import url('room');
+@import url('roomDesc');
+@import url('reserv');
+@import url('history');
+
+// files for pages services
+@import url('servicesPage');
+@import url('spa');
+@import url('golf');
+@import url('bar');
+@import url('fitness');
+@import url('rest');
+@import url('blogPage');
+@import url('blogSingle');
+@import url('contact');
+
+@import url('responsive');

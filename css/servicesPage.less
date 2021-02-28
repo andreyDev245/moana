@@ -1,0 +1,263 @@
+//  style for page services
+
+.services_page_block:extend(.flex-sp-between){
+    flex-wrap: wrap;
+    padding: 110px 10px 45px;
+}
+
+.services_page_item{
+    font-family: 'renner-book', serif;
+    max-width: 345px;
+    width: 100%;
+    text-align: center;
+    line-height: 26px;
+    margin-bottom: 65px;
+
+    .services_page_title{
+        font-family: 'Playfair-regular', serif;
+        color: @font-title;
+        font-size: @size-twenty;
+        letter-spacing: .5px;
+        margin-bottom: 20px;
+        padding-top: 65px;
+        position: relative;
+
+        &::before{
+            content: "";
+            width: 50px;
+            height: 40px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    &:not(:nth-child(3n+3)){
+        margin-right: 15px;
+    }
+}
+
+.services_page_item:first-child .services_page_title::before{
+    width: 57px;
+    height: 41px;
+    background: url("../img/icon/spritesheet3.png")no-repeat;
+    background-position: -121px -58px;
+}
+.services_page_item:nth-child(2) .services_page_title::before{
+    width: 45px;
+    height: 43px;
+    background: url("../img/icon/spritesheet3.png")no-repeat;
+    background-position: -126px -5px;
+}
+.services_page_item:nth-child(3) .services_page_title::before{
+    width: 54px;
+    height: 43px;
+    background: url("../img/icon/spritesheet3.png")no-repeat;
+    background-position: -57px -58px;
+}
+.services_page_item:nth-child(4) .services_page_title::before{
+    width: 42px;
+    height: 42px;
+    background: url("../img/icon/spritesheet3.png")no-repeat;
+    background-position: -5px -58px; 
+}
+.services_page_item:nth-child(5) .services_page_title::before{
+    width: 53px;
+    height: 43px;
+    background: url("../img/icon/spritesheet3.png")no-repeat;
+    background-position: -63px -5px;  
+}
+.services_page_item:last-child .services_page_title::before{
+    width: 48px;
+    height: 42px;
+    background: url("../img/icon/spritesheet3.png")no-repeat;
+    background-position: -5px -5px;  
+}
+
+.services_features_slider{
+    display: flex;
+    overflow: hidden;
+
+    .services_features{
+        width: 100%;
+        max-width: 800px;
+        padding: 100px 80px;
+        background-color: @background-black;
+        position: relative;
+        z-index: 20;
+    }
+}
+
+.services_features_title,
+.services_features_subtitle{
+    font-size: @size-fortyfive;
+    color: @white-color;
+    letter-spacing: 1.35px;
+    font-weight: 700;
+}
+
+.services_features_text{
+    font-family: 'renner-book', serif;
+    color: @white-color;
+    line-height: 24px;
+    margin: 40px 0;
+}
+.services_features_btn{
+    background-color: @brown-btn;
+    letter-spacing: 1.95px;
+    border: 0;
+
+    &:hover,
+    &:focus{
+        border: 0;
+    }
+}
+
+.services_carousel_wrap{
+    overflow: hidden;
+    width: 100%;
+}
+
+.services_carousel{
+    width: 100%;
+    max-width:840px;
+    height: 100%;
+
+    .owl-item{
+        max-width: 840px !important;
+        width: 100%;
+        height: 100%;
+    }
+
+    .owl-nav{
+        width: 100%;
+        height: 50px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+
+        button.owl-prev,
+        button.owl-next{
+            font-family: sans-serif;
+            font-size: 0;
+            padding: 17px 17px !important;
+            position: absolute;
+            background-color: @background-light;
+            border-radius: 50%;
+            >span{
+                display: none;
+            }
+        }
+
+        button.owl-prev{
+            left: 35px;
+        }
+        button.owl-next{
+            right: 35px;
+            transform: rotate(180deg);
+        }
+        
+    }
+
+    .owl-stage-outer{
+        overflow: visible;
+        height: 100%;
+    }
+    .owl-stage{
+        height: 100%;
+    }
+}
+
+button.owl-prev::before,
+button.owl-next::before{
+    content: url("data:image/svg+xml; utf8, <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' xmlns:v='https://vecta.io/nano'><path d='M492 236H68.442l70.164-69.824c7.83-7.792 7.86-20.455.067-28.284s-20.456-7.86-28.285-.068l-104.504 104c-.007.006-.012.013-.018.02-7.81 7.792-7.834 20.496-.002 28.314.007.006.012.013.018.02l104.504 104c7.828 7.8 20.492 7.763 28.285-.068s7.762-20.492-.067-28.284L68.442 276H492c11.046 0 20-8.954 20-20s-8.954-20-20-20z'/></svg>");
+    display: inline-block;
+    width: 17px;
+    height: 11px;
+}
+
+.services_different:extend(.flex-sp-between){
+    align-items: stretch;
+    padding: 110px 10px;
+
+    .services_different_images:extend(.flex-sp-between){
+        width: 100%;
+        margin-right: 40px;
+        line-height: 0;
+        justify-content: center;
+    }
+    .services_differen_content{
+        width: 100%;
+        &:extend(.flex-col-sp-between);
+        align-items: flex-start;
+    }
+}
+
+.different_inner_img{
+    width: 270px;
+    
+    &:not(:last-child){
+        margin-right: 20px;
+    }
+}
+
+.services_different_title{
+    font-size: @size-thirtyfive;
+    color: @font-title;
+    width: 100%;
+    letter-spacing: 1.4px;
+    margin-bottom: 40px;
+}
+
+.services_different_text{
+    font-family: 'renner-book', serif;
+    line-height: 24px;
+    width: 100%;
+
+    &:not(:last-child){
+        margin-bottom: 20px;
+    }
+}
+
+.services_counter:extend(.flex-sp-between){
+    justify-content: center;
+    flex-wrap: wrap;
+    color: @white-color;
+    background: @background-black url("../img/background/counter.jpg")no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 110px 10px;
+
+    .services_counter_title{
+        width: 100%;
+        font-size: @size-thirtyfive;
+        letter-spacing: 1.4px;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    
+}
+
+.services_counter_item{
+    text-align: center;
+
+    .services_counter_num{
+        font-family: 'Lora-bold', serif;
+        font-size: @size-fortyfive;
+        line-height: 40px;
+        letter-spacing: 1.7px;
+        margin-bottom: 20px;
+    }
+
+    .services_counter_text{
+        font-family: 'renner-book', serif;
+        font-size: @size-seventeen;
+        text-transform: uppercase;
+    }
+
+    &:not(:last-child){
+        margin-right: 130px;
+    }
+}

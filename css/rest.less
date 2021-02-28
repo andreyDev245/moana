@@ -1,0 +1,265 @@
+//  style for section restaurant
+
+.header_rest{
+    background: @background-black url("../img/background/rest4.jpg")no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.rest_page{
+    padding: 110px 10px;
+}
+
+.rest_block_content{
+    &:extend(.flex-sp-between);
+}
+
+.rest_block_content_img,
+.rest_block_desc{
+    width: 50%;
+}
+.rest_block_content_img{
+    max-width: 520px;
+    line-height: 0;
+    margin-right: 15px;
+    filter: drop-shadow(0 0 15px @grey);
+}
+
+.rest_block_desc_title{
+    font-size: @size-fortyfive;
+    color: @font-title;
+    letter-spacing: 2.4px;
+    margin-bottom: 35px;
+}
+.rest_block_desc_subtitle{
+    font-size: @size-twentyfive;
+    font-weight: 700;
+    color: @font-title;
+    letter-spacing: .5px; 
+    margin-bottom: 20px;
+}
+
+.rest_block_desc_text{
+    font-family: 'renner-book', serif;
+    line-height: 26px;
+}
+
+.rest_block_author{
+    position: relative;
+    padding-left: 100px;
+    margin-top: 50px;
+
+    .rest_author_avatar{
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        border-radius: 50%;
+        line-height: 0;
+        border: 3px solid @brown-btn;
+        >img{
+            border-radius: 50%;
+        }
+    }
+
+    .rest_author_name{
+        font-family: 'Playfair-bold', serif;
+        color: @font-title;
+        letter-spacing: .5px;
+        .rest_author_name_inner{
+            color: @font-brown;
+            font-size: @size-seventeen;   
+        }
+    }
+
+    .rest_author_signature{
+        max-width: 150px;
+        margin-top: 10px;
+    }
+}
+
+.rest_block_lists{
+    &:extend(.flex-sp-between);
+    margin-top: 150px;
+    align-items: flex-start;
+}
+
+.rest_block_list_wrap{
+    max-width: 370px;
+    width: 100%;
+    
+    .rest_block_list_title{
+        font-size: @size-thirtyfive;
+        color: @font-title;
+        letter-spacing: 1.7px;
+        margin-bottom: 45px;
+        text-align: center;
+        >span{
+            border-bottom: 1px solid @font-title;
+        }
+    }
+
+    &:not(:last-child){
+        margin-right: 15px;
+    }
+}
+
+.rest_block_list_item{
+    &:not(:last-child){
+        margin-bottom: 30px;
+    }
+    .rest_block_list_name{
+        font-family: 'renner-medium', serif;
+        font-size: @size-seventeen;
+        color: @font-title;
+        text-transform: uppercase;
+        line-height: 24px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        flex-basis: 370px;
+    }
+
+    .rest_block_list_text{
+        font-family: 'renner-book', serif;
+        font-size: 13px;
+        margin-top: 10px;
+    }
+
+    .dots{
+        flex-shrink: 2;
+        width: 100%;
+        border-bottom: 2px dotted @font-title;
+        height: 10px;
+        margin-bottom: 5px;
+    }
+    .limit_text{
+        flex-shrink: 0;
+        max-width: 235px;
+    }
+}
+
+.rest_page_form{
+    padding: 110px 10px;
+    background: @background-black url("../img/background/rest5.jpg")no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.rest_form{
+    width: 100%;
+    max-width: 835px;
+    margin: 0 auto;
+    padding: 70px 40px 60px;
+    background-color: @background-black;
+    color: @white-color;
+}
+
+
+.rest_form_title_block{
+    text-align: center;
+    margin-bottom: 45px;
+
+    .rest_form_title{
+        font-size: @size-fortyfive;
+        margin-bottom: 10px;
+        letter-spacing: 2.4px;
+    }
+
+    .rest_form_subtitle{
+        font-family: 'renner-book', serif;
+        font-size: @size-seventeen;
+        text-transform: uppercase;
+        letter-spacing: .5px;
+    }
+}
+
+.rest_form_input_wrap{
+    &:extend(.flex-sp-between);
+    flex-wrap: wrap;
+    padding: 0;
+    border: 0;
+}
+
+.rest_wrap_input{
+    &:extend(.flex-sp-between);
+    width: 100%;
+}
+
+.rest_form_input{
+    font-family: 'renner-book', serif;
+    width: 48.8%;
+    padding: 15px 10px;
+    margin-bottom: 15px;
+    background-color: transparent;
+    border: 2px solid @background-light;
+    color: @font-text;
+    outline: 0;
+    letter-spacing: 1.4px;
+
+    &::placeholder{
+        color: @white-color;
+    }
+
+    &:nth-child(odd){
+        margin-right: 15px;
+    }
+    &:focus{
+        background-color: @background-light;
+        border: 2px solid @brown-btn;
+    }
+}
+
+.rest_form_message{
+    font-family: 'renner-book', serif;
+    width: 100%;
+    height: 150px;
+    padding: 15px 10px;
+    background-color: transparent;
+    border: 2px solid @background-light;
+    color: @font-text;
+    resize: none;
+    outline: 0;
+    
+    &::placeholder{
+        color: @white-color;
+    }
+    &:focus{
+        background-color: @background-light;
+        border: 2px solid @brown-btn;
+    }
+}
+
+.rest_form_btn{
+    font-family: 'renner-medium', serif;
+    font-size: @size-thirteen;
+    color: @white-color;
+    letter-spacing: 1.9px;
+    text-transform: uppercase;
+    padding: 1rem 2.37rem;
+    margin: 0 auto;
+    margin-top: 35px;
+    background-color: @brown-btn;
+    border: 0;
+    transition: .3s;
+    cursor: pointer;
+
+    &:hover{
+        background-color: @white-light;
+        color: @font-title;
+    }
+}
+
+.rest_form_input.jq-selectbox{
+    padding: 0;
+}
+.rest_form_input.jq-selectbox.focused{
+    border: 2px solid @brown-btn;
+}
+
+
+.rest_form_input.jq-selectbox .sel.selected{
+    background-color: @font-title;
+}

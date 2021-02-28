@@ -1,0 +1,203 @@
+// style for page contact
+
+.contactPage_list:extend(.flex-sp-between){
+    background-color: @background-light;
+    padding: 40px 80px 30px;
+    border-radius: 2px;
+    box-shadow: 0px 17px 65px 0 rgba(0, 0, 0, 0.15);
+    position: relative;
+    top: -40px;
+    margin: 0 10px 110px;
+}
+
+.contactPage_item_title{
+    font-family: 'renner-medium', serif;
+    color: @font-title;
+    font-size: @size-seventeen;
+    letter-spacing: 1.4px;
+    padding-top: 65px;
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+
+    &::before{
+        content: "";
+        width: 36px;
+        height: 35px;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.contactPage_item:not(:last-child){
+    margin-right: 15px;
+}
+.contactPage_item:first-child .contactPage_item_title::before{
+    background: url("../img/icon/spritesheet6.png")no-repeat;
+    background-position: -95px -5px;
+}
+.contactPage_item:nth-child(2) .contactPage_item_title::before{
+    background: url("../img/icon/spritesheet6.png")no-repeat;
+    background-position: -5px;
+}
+.contactPage_item:last-child .contactPage_item_title::before{
+    background: url("../img/icon/spritesheet6.png")no-repeat;
+    background-position: -51px -5px;
+}
+
+.contactPage_item_text{
+    font-family: 'renner-book', serif;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.contactPage_form{
+    padding: 0 10px;
+}
+.contactPage_form_title{
+    font-size: @size-fortyfive;
+    color: @font-title;
+    letter-spacing: 1.4px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.contactPage_form_subtitle{
+    font-family: 'renner-medium', serif;
+    font-size: @size-seventeen;
+    color: @font-title;
+    text-transform: uppercase;
+    letter-spacing: .4px;
+    line-height: 26px;
+    text-align: center; 
+}
+
+.contactPage_input_wrap{
+    &:extend(.flex-sp-between);
+    flex-wrap: wrap;
+}
+
+.contactPage_form_inner{
+    text-align: center;
+    margin: 65px 0 0;
+    padding: 0;
+    border: none;
+
+    .contactPage_form_input,
+    .contactPage_form_text{
+        font-family: 'renner-book', serif;
+        width: 32%;
+        padding: 15px 10px;
+        margin-bottom: 15px;
+        outline: none;
+        border: 2px solid @grey-border;
+        &:focus{
+            border: 2px solid @brown-btn;
+            box-shadow: none; 
+        }
+    }
+
+    .contactPage_form_text{
+        width: 100%;
+        resize: none;
+        height: 200px;
+        margin-bottom: 30px;
+    }
+
+    .contactPage_form_btn{
+        margin: 0 auto;
+    }
+}
+
+.contactPage_social{
+    &:extend(.flex-sp-between);
+    margin-top: 110px;
+
+    .contactPage_social_link{
+        font-family: 'renner-medium', serif;
+        font-size: @size-twenty;
+        color: @white-color;
+        width: 20%;
+        letter-spacing: 1.4px;
+        display: inline-block;
+        padding: 40px 0;
+        text-align: center;
+        background-color: @background-black;
+        transition: .3s;
+        position: relative;
+
+        &:hover,
+        &:focus{
+            background-color: @background-light;
+            color: transparent;
+            box-shadow: 0px 4px 27px 0 rgba(0, 0, 0, 0.2); 
+        }
+
+        .contactPage_social_img{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: .3s;
+        }
+    }
+}
+
+
+.contactPage_social_link{
+    &:hover,
+    &:focus{
+        .contactPage_social_img{
+            opacity: 1;
+        }
+    }
+}
+
+.map{
+    width: 100%;
+    height: 500px;
+}
+
+.contactPage_team{
+    &:extend(.flex-sp-between);
+    align-items: flex-end;
+}
+
+.contactPage_team_item{
+    width: 50%;
+}
+
+.contactPage_team_content{
+    padding: 110px 100px 110px 180px;
+
+    .contactPage_team_title{
+        font-size: @size-fortyfive;
+        letter-spacing: 1.4px;
+        color: @font-title;
+        margin-bottom: 40px;
+    }
+
+    .contactPage_team_subtitle{
+        font-family: 'Playfair-Italic', serif;
+        font-size: @size-seventeen;
+        font-weight: bold;
+        color: @font-title;
+        letter-spacing: 1.4px;
+        margin-bottom: 20px;
+    }
+
+    .contactPage_team_text{
+        font-family: 'renner-book', serif;
+        line-height: 24px;
+        margin-bottom: 50px;
+    }
+}
+
+.contactPage_team_img{
+    line-height: 0;
+}

@@ -1,0 +1,54 @@
+//  style for block features
+
+.features{
+    padding: 115px 10px 105px;
+}
+
+.features_list:extend(.flex-sp-between){
+
+    .features_item{
+        width: 100%;
+        max-width: 340px;
+
+        .features_item_title{
+            font-size: @size-twenty;
+            color: @font-title;
+            margin-bottom: 25px;
+            position: relative;
+            padding-top: 90px;
+        }
+
+        .features_item_title::before{
+            content: ""; 
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .features_item_text{
+            font-family: 'renner-book', serif;
+            font-size: @size-fifteen;
+            line-height: 26px;
+        }
+
+        &:not(:last-child){
+            margin-right: 10px;
+        }
+    }
+}
+
+.features_item:first-child .features_item_title::before{
+    background: url("../img/icon/sprite1.png")no-repeat;
+    background-position: -120px 0;
+    width: 65px;
+}
+.features_item:nth-child(2) .features_item_title::before{
+    background: url("../img/icon/sprite1.png")no-repeat;
+    background-position: 3px 0;
+}
+.features_item:last-child .features_item_title::before{
+    background: url("../img/icon/sprite1.png")no-repeat;
+    background-position: -56px 0;
+}

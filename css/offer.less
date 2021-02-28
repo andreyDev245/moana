@@ -1,0 +1,140 @@
+//  style for page offer
+
+.page_offer{
+    background-color: @background-grey;
+}
+
+.offer_title_block{
+    padding: 110px 10px 65px;
+    text-align: center;
+
+    .offer_title{
+        font-size: @size-fortyfive;
+        color: @font-title;
+        margin-bottom: 20px;
+    }
+
+    .offer_subtitle{
+        font-family: 'renner-book', serif;
+        font-size: @size-seventeen;
+        color: @font-title;
+        text-transform: uppercase;
+        line-height: 24px;
+    }
+}
+
+.offer_content:extend(.flex-sp-between){
+    justify-content: center;
+    line-height: 0;
+    align-items: stretch;
+    
+    .offer_content_item{
+        width: 50%; 
+        max-width: 960px;
+        position: relative;
+    }
+
+    .offer_content_large{
+        background: url("../img/background/room6.jpg")no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+.offer_item_desc:extend(.flex-sp-between){
+    max-width: 720px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 2.08vw 2.34vw;
+    color: @white-color;
+    background-color: @background-black;
+
+    .offer_item_desc_title{
+        font-size: @size-thirty;
+        letter-spacing: 0.9px;
+        margin-bottom: 30px;
+        line-height: normal;
+    }
+
+    .offer_item_desc_meta{
+        font-family: 'renner-book', serif;
+        font-size: @size-twenty;
+        line-height: 24px;
+    }
+
+    .offer_item_desc_link{
+        color: @font-title;
+        background-color: @background-light;
+        border: none;
+        margin-left: 5.20vw;
+
+        &:hover,
+        &:focus{
+            background-color: @font-brown;
+        }
+    }
+}
+
+.offer_desc_price{
+    font-family: 'renner-medium', serif;
+    color: @font-brown;
+}
+
+.offer_basic_room:extend(.flex-sp-between){
+    align-items: stretch;
+    
+    .offer_basic_room_content,
+    .offer_basic_room_img{
+        width: 50%;
+    }
+}
+
+.offer_basic_room:first-child > .offer_basic_room_img{
+    background: url("../img/background/room7.jpg")no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.offer_basic_room:last-child > .offer_basic_room_img{
+    background: url("../img/background/room8.jpg")no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.offer_basic_room_content{
+    padding: 45px 40px;
+    background-color: @background-light;
+
+    .offer_room_title{
+        font-size: @size-twentyfive;
+        line-height: 25px;
+        color: @font-title;
+        margin-bottom: 25px;
+        letter-spacing: 0.75px;
+    }
+
+    .offer_room_subtitle{
+        font-family: 'renner-book', serif;
+        font-size: @size-twenty;
+        color: @font-title;
+        line-height: normal;
+        margin-bottom: 35px;
+    }
+
+    .offer_room_text{
+        font-family: 'renner-book', serif;
+        font-size: @size-fifteen;
+        line-height: 22px;
+        margin-bottom: 35px;
+    }
+}
+
+.offer_info{
+    padding: 50px 10px 70px;
+    max-width: 950px;
+    width: 100%;
+    margin: 0 auto;text-align: center;
+    font-size: @size-twentyfive;
+    color: @font-title;
+    line-height: 38px;
+}

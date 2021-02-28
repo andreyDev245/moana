@@ -1,0 +1,522 @@
+//  style for page room
+
+.catalog{
+    padding: 110px 10px;
+}
+
+.catalog_wrap{
+    &:extend(.flex-sp-between);
+    align-items: flex-start;
+}
+
+.catalog_block:extend(.flex-sp-between){
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 775px;
+    margin-right: 20px;
+}
+
+.catalog_block_card{
+    display: inline-block;
+    max-width: 370px;
+    width: 48%;
+    position: relative;
+    background-color: @background-light;
+    margin-bottom: 50px;
+    box-sizing: content-box;
+    transition: box-shadow .3s;
+
+    .catalog_card_img{
+        width: 100%;
+        max-height: 290px;
+        height: 100%;
+        line-height: 0;
+        background-color: @background-black;
+    }
+
+    &:hover,
+    &:focus{
+        box-shadow: 0 0 35px rgba(0, 0, 0, 0.15);
+    }
+
+    &:nth-child(odd){
+        margin-right: 15px;
+    }
+}
+
+.catalog_block_card.catalog_card_sale::before{
+    content: "Sale 40%";
+    font-family: 'renner-book', serif;
+    font-size: @size-thirteen;
+    color: @white-color;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: @font-brown;
+    padding: 10px 30px;
+    border-radius: 0 0 10px 10px;
+}
+
+.catalog_card_content{
+    padding: 45px 40px;
+    position: relative;
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent @grey-border @grey-border @grey-border;
+    
+    .catalog_meta_box{
+        position: absolute;
+        top: -20px;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+
+    .catalog_card_meta{
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: @background-light;
+        box-shadow: 0 0 13px rgba(0, 0, 0, 0.15);
+        font-family: 'renner-book', serif;
+        color: @font-title;
+        font-size: @size-fifteen;
+    
+        .catalog_meta_price{
+            color: @font-brown;
+        }
+    }
+    
+    .catalog_card_title{
+        font-size: @size-twenty;
+        color: @font-title;
+        letter-spacing: 1.6px;
+        text-align: center;
+        line-height: 24px;
+        margin-bottom: 15px;
+    }
+
+    .catalog_parameters:extend(.flex-sp-between){
+        
+        .catalog_parameters_item{
+            font-family: 'renner-book', serif;
+            font-size: @size-fifteen;
+            padding-left: 30px;
+            line-height: 25px;
+            position: relative;
+        }
+
+        .catalog_parameters_item::before{
+            content: "";
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    .catalog_card_text{
+        font-family: 'renner-book', serif;
+        font-size: @size-fifteen;
+        line-height: 26px;
+        margin-top: 25px;
+    }
+
+    .catalog_card_link_box{
+        text-align: center;
+        margin-top: 25px;
+    }
+    .catalog_card_link{
+        font-family: 'renner-medium', serif;
+        font-size: @size-thirteen;
+        color: @font-title;
+        text-transform: uppercase;
+        letter-spacing: 1.3px;
+        padding: 3px 0;
+        border-bottom: 1px solid transparent;
+        transition: border-bottom .3s;
+
+        &:hover,
+        &:focus{
+            border-bottom: 1px solid @font-title;    
+        }
+    }
+
+    &:hover,
+    &focus{
+        border-color: transparent;
+    }
+}
+
+
+.catalog_parameters_item:first-child::before{   
+    background: url("../img/icon/sprite2.png")no-repeat;
+    background-position: 0 0;
+}
+.catalog_parameters_item:nth-child(2)::before{
+    background: url("../img/icon/sprite2.png")no-repeat;
+    background-position: -32px 0;
+}
+.catalog_parameters_item:last-child::before{
+    background: url("../img/icon/sprite2.png")no-repeat;
+    background-position: -60px 0;
+}
+
+//  style for pagination block
+.pagination{
+    width: 100%;
+    text-align: center;
+}
+
+.pagination_item{
+    display: inline-block;
+
+    &:not(:last-child){
+        margin-right: 5px;
+    }
+}
+
+.pagination_link{
+    display: inline-block;
+    font-family: 'renner-book', serif;
+    font-size: @size-fifteen;
+    color: @white-color;
+    background-color: @font-title;
+    padding: 12px 16px;   
+    letter-spacing: 1px;
+}
+
+.pagination_link.pagination_link__active{
+    background-color: @font-brown;
+}
+
+
+//  style for block reservation
+
+.reservation_sidebar{
+    width: 100%;
+    max-width: 370px;
+    min-width: 290px;
+}
+
+.reservation_form{
+    width: 100%; 
+    max-width: 370px;
+} 
+
+.reservation_title{
+    font-family: 'Playfair-regular', serif;
+    font-size: @size-twenty;
+    color: @white-color;
+    background-color: @background-black;
+    border-bottom: 1px solid @grey-input;
+    padding: 25px 28px;
+    letter-spacing: 1.6px;
+}
+
+.reservation_form_data,
+.reservation_form_price{
+    width: 100%;
+    background-color: @background-black;
+    border: 0;
+    margin: 0 0 40px;
+    padding: 25px 28px 35px;
+}
+
+.reservation_label{
+    display: block;
+    font-family: 'renner-book', serif;
+    font-size: @size-fifteen;
+    color: @white-color;
+    text-transform: uppercase;
+    letter-spacing: 1.45px;
+    margin-bottom: 25px;
+}
+.reservation_input{
+    font-family: 'renner-book', serif;
+    font-size: @size-thirteen;
+    color: @white-color;
+    width: 100%;
+    margin-top: 10px;
+    padding: 15px 13px;
+    background-color: @grey-input;
+    border: 0;
+    letter-spacing: 1.4px;
+    cursor: pointer;
+    outline: none;
+}
+
+.reservation_btn{
+    background-color: @font-brown;
+    text-transform: uppercase;
+    letter-spacing: 2.4px;
+}
+
+.reservation_mobile_menu{
+    display: none;
+}
+
+.reservation_mobile_btn{
+    font-family: 'renner-medium', serif;
+    font-size: @size-twenty;
+    color: @white-color;
+    width: 100%;
+    text-align: center;
+    letter-spacing: 1.3px;
+    padding: 1rem 2.37rem;
+    margin-bottom: 50px;
+    transition: background-color .2s;
+    background: @background-black url("../img/icon/app.svg")no-repeat;
+    background-position: 30px 50%;
+
+    &:hover,
+    &:focus{
+        background-color: @black-hover;
+    }
+}
+
+.reservation_sidebar_mobile.reservation_mobile--active{
+    display: block;
+    position: absolute;
+    background-color: @background-black;
+    z-index: 10;
+
+    .reservation_price_inner,
+    .features_reserv_list,
+    .reservation_suport_inner{
+        border-right: 0;
+        border-left: 0;
+        border-top: 0;
+        border-color: rgba(255, 255, 255, 0.15);
+        color: @white-color;
+    }
+}
+
+// change style for select with extensions formStyler
+
+.inputStyler{
+    padding: 0;
+}
+
+.jq-selectbox.focused .jq-selectbox__select{
+    border: 0;
+}
+.jq-selectbox__select:active{
+    background: none;
+    box-shadow: none;
+}
+
+.jq-selectbox__trigger{
+    border-left: 0;
+}
+
+.jq-selectbox__trigger-arrow{
+    position: absolute;
+    top: 17px; 
+    right: 18px; 
+    width: 10px;
+    height: 10px;
+    border-top: 1px solid @white-color;
+    border-right: 1px solid @white-color;
+    border-left: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    transform: rotate(135deg);
+}
+.jq-selectbox:hover .jq-selectbox__trigger-arrow {
+	border-top-color: @white-color;
+}
+
+.jq-selectbox li{
+    color: @font-title;
+}
+.jq-selectbox li:hover{
+    background-color: @black-hover;
+}
+
+.jq-selectbox__select{
+    font-family: 'renner-book', serif;
+    font-size: @size-thirteen;
+    color: @white-color;
+    letter-spacing: 1.4px;
+    height: auto;
+    padding: 15px 45px 15px 13px;
+    border: none;
+    border-radius: 0;
+    background: none;
+    box-shadow: none;
+    line-height: 19px;
+    text-shadow: none;
+}
+
+.jq-selectbox__select:hover{
+    background: none;
+}
+
+
+
+// reservation price
+.reservation_form_price{
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    position: relative;
+}
+
+.reservation_price_input{
+    max-width: 370px;
+    width: 100%;
+    padding: 25px 28px;
+}
+
+.reservation_price_inner{
+    padding: 35px 28px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent @grey-border @grey-border @grey-border;
+}
+
+// features_reserv block
+
+.features_reserv{
+    margin-top: 40px;
+    max-width: 370px;
+    width: 100%;
+
+
+    .features_reserv_list{
+        padding: 35px 28px;
+        font-size: @size-fifteen;
+        font-family: 'renner-book', serif;
+        color: @font-title;
+        letter-spacing: 1.4px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: transparent @grey-border @grey-border @grey-border;  
+
+        .features_reserv_item{
+            padding-left: 30px;
+            position: relative;
+        }
+        .features_reserv_item:not(:last-child){
+            margin-bottom: 20px;
+        }
+
+        .features_reserv_item::before{
+            content: "";
+            width: 15px;
+            height: 15px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+}
+
+.features_reserv_item:first-child::before{
+    background: url("../img/icon/coffee-cup.svg")no-repeat;
+}
+.features_reserv_item:nth-child(2)::before{
+    background: url("../img/icon/telegram.svg")no-repeat;
+}
+.features_reserv_item:nth-child(3)::before{
+    background: url("../img/icon/dollar-money-cash.svg")no-repeat;
+}
+.features_reserv_item:nth-child(4)::before{
+    background: url("../img/icon/furniture.svg")no-repeat;
+}
+.features_reserv_item:nth-child(5)::before{
+    background: url("../img/icon/id-card.svg")no-repeat;
+}
+.features_reserv_item:last-child::before{
+    background: url("../img/icon/medal.svg")no-repeat;
+}
+
+.reservation_suport{
+    font-size: @size-fifteen;
+    font-family: 'renner-book', serif;
+    color: @font-title;
+    width: 100%;
+    max-width: 370px;
+    margin-top: 40px;
+}
+
+.reservation_suport_inner{
+    padding: 35px 28px 30px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent @grey-border @grey-border @grey-border;  
+}
+
+.reservation_suport_item:not(:last-child){
+    margin-bottom: 15px;
+}
+
+.reservation_title_address{
+    font-family: 'Playfair-regular', serif;
+    font-size: @size-twenty;
+    letter-spacing: 1.6px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.reservation_address_text{
+    line-height: 26px;
+}
+
+
+
+// settings extensions Range
+
+.irs--flat{
+    height: auto;
+    cursor: pointer;
+}
+
+.irs--flat .irs-line{
+    width: 100%;
+    height: 2px;
+    top: 0;
+    background-color: @grey-border;
+}
+
+.irs--flat .irs-min, 
+.irs--flat .irs-max,
+.irs--flat .irs-from, 
+.irs--flat .irs-to{
+    display: none;
+}
+
+.irs--flat .irs-single{
+    font-size: @size-twenty;
+    color: @font-brown;
+    top: -79px;
+    right: 0;
+    left: auto !important;
+    background-color: transparent;
+
+    &::before{
+        display: none;
+    }
+}
+
+.irs--flat .irs-handle{
+    width: 15px;
+    height: 15px;
+    background-color: @brown-btn;
+    border-radius: 50%;
+    top: -6px;
+    cursor: pointer;
+
+    > i:first-child{
+        display: none;
+    }
+}
+
+.irs--flat .irs-bar{
+    height: 2px;
+    top: 0;
+    background-color: @brown-btn;
+}
+

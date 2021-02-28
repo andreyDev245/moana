@@ -1,0 +1,122 @@
+// style for page spa
+
+.header_spa{
+    background: @background-black url("../img/background/spa8.jpg")no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.page_spa{
+    padding: 110px 10px;
+}
+
+.spa_desc_block_title:extend(.flex-sp-between){
+    font-family: 'renner-book', serif;
+    line-height: 26px;
+    margin-bottom: 60px;
+
+    .spa_desc_title{
+        font-family: 'Playfair-regular', serif;
+        font-size: @size-twentyfive;
+        color: @font-title;
+        max-width: 570px;
+        width: 100%;
+        margin-right: 20px;
+        letter-spacing: 0.5px;
+        line-height: 37px;
+    }
+}
+
+.spa_desc_content:extend(.flex-sp-between){
+
+    .spa_desc_content_item{
+        max-width: 370px;
+        width: 100%;
+        transition: .3s;
+        
+
+        .spa_desc_content_img{
+            width: 100%;
+            line-height: 0;
+        }
+
+        &:not(:last-child){
+            margin-right: 15px;
+        }
+    }
+
+    .spa_desc_content_inner{
+        padding: 25px 30px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: transparent @grey-border @grey-border @grey-border;
+        text-align: center;
+        
+        .spa_desc_content_title{
+            font-size: @size-twenty;
+            color: @font-title;
+            letter-spacing: .5px;
+            margin: 0 auto;
+            margin-bottom: 25px;
+            width: 200px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+
+        }
+
+        .spa_desc_content_text{
+            font-family: 'renner-book', serif;
+            line-height: 24px;
+            margin-bottom: 15px;
+        }
+
+        .spa_desc_content_btn{
+            font-family: 'renner-medium', serif;
+            color: @font-title;
+            font-size: @size-thirteen;
+            text-transform: uppercase;
+            letter-spacing: .4px;
+            border-bottom: 1px solid transparent;
+            transition: .3s;
+        }
+    }
+}
+
+
+
+.spa_desc_content_item:hover{
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.15);
+
+    .spa_desc_content_inner{
+        border-color: transparent;
+    }
+    .spa_desc_content_btn{
+        border-bottom: 1px solid @font-title;
+    }
+}
+
+
+.page_spa_box{
+    padding: 160px 10px;
+    background: @background-black url("../img/background/spa5.jpg")no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.page_spa_box_inner{
+    max-width: 540px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: 160px;
+    text-align: center;
+
+    .page_spa_box_text{
+        font-family: 'renner-bold', serif;
+        font-size: @size-twentyfive;
+        color: @font-title;
+        text-transform: uppercase;
+        line-height: 40px;
+        letter-spacing: .5px;
+        margin-bottom: 40px;
+    }
+}
